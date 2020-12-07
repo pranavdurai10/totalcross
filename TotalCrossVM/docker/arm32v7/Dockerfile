@@ -1,7 +1,6 @@
-FROM arm32v7/ubuntu:xenial AS build
-# 
+FROM arm32v7/ubuntu:bionic AS build
+#
 
-MAINTAINER Italo Yeltsin "br.yeltsin@gmail.com"
 
 # TotalCross
 RUN apt-get update && \
@@ -24,7 +23,8 @@ RUN apt-get update && \
         libxxf86vm-dev \
         libxss-dev \
         libgl1-mesa-dev \
-        libesd0-dev \
+# Lastly available on Xenial, deprecated for Bionic
+#       libesd0-dev \
         libdbus-1-dev \
         libudev-dev \
         libgles2-mesa-dev \
