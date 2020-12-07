@@ -525,7 +525,7 @@ target_compile_options(tcvm
 # We need to use C++ 11
 if(${CMAKE_VERSION} VERSION_LESS "3.8" OR MSVC) 
   set_target_properties(tcvm PROPERTIES
-    CXX_STANDARD 11
+    CXX_STANDARD 17
     CXX_STANDARD_REQUIRED YES
     CXX_EXTENSIONS NO
   )
