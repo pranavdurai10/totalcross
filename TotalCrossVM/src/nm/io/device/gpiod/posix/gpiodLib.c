@@ -10,6 +10,8 @@
 #include <dlfcn.h>
 #include <glob.h>
 
+__asm__(".symver glob,glob@GLIBC_2.4");
+
 static void* gpiodLib = NULL;
 
 _gpiod_chip_open_by_numberProc _gpiod_chip_open_by_number;
